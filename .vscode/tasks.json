@@ -1,0 +1,20 @@
+// .vscode/tasks.json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile & test (Windows)",
+            "type": "shell",
+            "command": "javac -d out -classpath \"lib/*\" src\\Unit5Project.java && javac -d out -classpath \"out;lib/*\" test\\Unit5ProjectTest.java && java -classpath \"out;lib/*\" org.junit.runner.JUnitCore Unit5ProjectTest",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
